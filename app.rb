@@ -14,6 +14,13 @@ use Rack::Cors do
   end
 end
 
+
+set :port, ENV['PORT'] || 4567  
+
+get '/' do
+  'API up!'
+end
+
 get '/' do
   content_type :json
   { message: 'Sound Menory API!' }.to_json
