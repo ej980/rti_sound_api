@@ -7,9 +7,11 @@ GEM
       i18n (>= 1.8.11, < 2)
     i18n (1.14.5)
       concurrent-ruby (~> 1.0)
+    logger (1.6.1)
     multi_json (1.15.0)
     mustermann (3.0.3)
       ruby2_keywords (~> 0.0.1)
+    ostruct (0.6.0)
     rack (3.1.7)
     rack-cors (2.0.2)
       rack (>= 2.0.0)
@@ -41,6 +43,8 @@ PLATFORMS
 DEPENDENCIES
   base64
   faker
+  logger
+  ostruct
   rack-cors
   sinatra
   sinatra-contrib
