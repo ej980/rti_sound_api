@@ -17,3 +17,5 @@ gem 'base64'
 
 
 
+
+gem "rackup", "~> 2.1"
