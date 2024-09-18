@@ -2,6 +2,10 @@
 
 source "https://rubygems.org"
 
+gem 'logger'
+gem 'ostruct'
+
+
 gem "sinatra"
 gem "sinatra-contrib"
 gem 'sinatra-cors'
