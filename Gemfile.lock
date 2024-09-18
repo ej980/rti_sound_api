@@ -39,6 +39,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  base64
   faker
   rack-cors
   sinatra

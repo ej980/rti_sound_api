@@ -6,11 +6,7 @@
   "routes": [
     {
       "src": "/audio/(.*)", 
-      "dest": "/audio/$1"
-    },
-    {
-      "src": "/(.*).mp3", 
-      "dest": "/audio/$1.mp3"
+      "dest": "/public/audio/$1"
     },
     { "src": "/(.*)", "dest": "/config.ru" }
   ]

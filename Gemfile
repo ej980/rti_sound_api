@@ -9,6 +9,7 @@ gem 'sinatra-cors'
 gem 'faker'
 
 gem 'rack-cors'
+gem 'base64'
 
 
 
