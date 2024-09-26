@@ -16,6 +16,8 @@ GEM
     puma (6.4.3)
       nio4r (~> 2.0)
     rack (2.2.9)
+    rack-cors (2.0.2)
+      rack (>= 2.0.0)
     rack-protection (3.2.0)
       base64 (>= 0.1.0)
       rack (~> 2.2, >= 2.2.4)
@@ -45,6 +47,7 @@ DEPENDENCIES
   ostruct
   puma (~> 6.4)
   rack (~> 2.2)
+  rack-cors
   sinatra
   sinatra-contrib
   sinatra-cors
