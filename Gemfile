@@ -20,3 +20,5 @@ gem 'rack', '~> 2.2'
 
 gem "puma", "~> 6.4"
 
+
+gem "faraday", "~> 2.12"

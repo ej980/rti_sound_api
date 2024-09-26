@@ -3,6 +3,8 @@ require 'json'
 require 'sinatra/cors'
 require 'rack/cors'
 require "base64"
+require 'faraday'
+
 
 
 use Rack::Cors do
@@ -42,7 +44,13 @@ end
   ]
 get '/months/list' do
   content_type :json
-  months.to_json
+  response = Faraday.get('https://rti-sound-api.onrender.com/months/list')
+  if response.success?
+    response.body
+  else
+    status 500
+  { error: 'Unable API' }.to_json
+  end
 end
 
 set :public, 'public'
