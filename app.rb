@@ -10,7 +10,7 @@ use Rack::Cors do
     resource '*',
       headers: :any,
       methods: [:get, :post, :put, :delete, :options, :head],
-      credentials: true
+      credentials: false
   end
 end
 
