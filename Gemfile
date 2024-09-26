@@ -18,7 +18,6 @@ gem 'base64'
 
 
 
-gem "rackup", "~> 2.1"
 
 gem "puma", "~> 6.4"
 
