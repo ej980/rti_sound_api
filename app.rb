@@ -15,7 +15,7 @@ use Rack::Cors do
 end
 
 options '*' do
-  response.headers['Access-Control-Allow-Origin'] = 'https://meee.com.tw'
+  response.headers['Access-Control-Allow-Origin'] = '*'
   response.headers['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS'
   response.headers['Access-Control-Allow-Headers'] = 'Content-Type, Authorization'
   200
@@ -48,7 +48,6 @@ end
     { id: 12, month_id: '12月 December', month: 'DEC',title:'燒肉粽', title_en:'"Sio Bah-tsàng" Sticky Rice Dumpling Vendor', img: 'https://meee.com.tw/SmrjCtN.jpg', copywriting: '在便利商店尚未普及的年代，賣肉粽的小販常在晚上九、十點後騎著車，以臺灣台語高喊「燒～肉粽」沿路叫賣(「燒」是熱的意思)。這熟悉的叫賣聲傳遞溫暖的臺灣滋味，是許多臺灣人共同的聲音記憶。', copyen: "Before there were convenience stores, vendors selling rice dumplings often rode their bikes late at night, around 9 or 10 p.m., calling out 'Sio Bah-tsàng' (‘Sio’ means hot in Tâi-gí) to hawk their goods. This familiar cry, a warm expression of Taiwanese flavor, is a shared auditory memory for many people in Taiwan."}
   ]
 get '/months/list' do
-  response.headers['Access-Control-Allow-Origin'] = 'https://meee.com.tw'
   content_type :json
   months.to_json
 end
