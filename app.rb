@@ -10,11 +10,14 @@ use Rack::Cors do
     resource '*',
       headers: :any,
       methods: [:get, :post, :put, :delete, :options, :head],
-      credentials: false
+      credentials: true
   end
 end
 
-
+before do
+  response.headers['Access-Control-Allow-Origin'] = '*'
+  response.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS, HEAD'
+end
 
 set :port, ENV['PORT'] || 4567  
 
