@@ -6,7 +6,7 @@ require "base64"
 
 use Rack::Cors do
   allow do
-    origins '*' 
+    origins 'https://meee.com.tw' 
     resource '*',
       headers: :any,
       methods: [:get, :post, :put, :delete, :options, :head],
