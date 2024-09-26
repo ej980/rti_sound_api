@@ -14,8 +14,8 @@ gem 'faker'
 
 gem 'base64'
 
+gem 'rack', '~> 2.2'
 
-gem 'rack', '~> 3.1', '>= 3.1.7'
 
 
 gem "puma", "~> 6.4"
