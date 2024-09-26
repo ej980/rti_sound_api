@@ -14,15 +14,6 @@ use Rack::Cors do
   end
 end
 
-options '*' do
-  response.headers['Access-Control-Allow-Origin'] = 'https://meee.com.tw'
-  response.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS, HEAD'
-  response.headers['Access-Control-Allow-Headers'] = 'Authorization, Content-Type'
-  200
-end
-
-
-
 set :port, ENV['PORT'] || 4567  
 
 get '/' do
