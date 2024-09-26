@@ -6,12 +6,16 @@ require "base64"
 
 use Rack::Cors do
   allow do
-    origins '*' 
+    origins 'https://2025calendar.rti.org.tw/' 
     resource '*',
       headers: :any,
       methods: [:get, :post, :put, :delete, :options, :head],
       credentials: false
   end
+end
+
+configure do
+  enable :cross_origin
 end
 
 
