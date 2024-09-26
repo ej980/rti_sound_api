@@ -23,6 +23,27 @@ get '/' do
   'API up!'
 end
 
+get '/download/:version/:month' do
+  version = params['version']
+  month = params['month']
+
+  file_path = File.join(settings.public_folder, 'images', version, "#{month}.jpg")
+
+  if File.exist?(file_path)
+    content_type 'application/octet-stream'
+    attachment "#{month}_#{version}.jpg"
+    send_file(file_path)
+  else
+    status 404
+    { error: 'File not found' }.to_json
+  end
+
+end
+
+
+
+
+
 get '/' do
   content_type :json
   { message: 'Sound Menory API!' }.to_json
@@ -44,13 +65,7 @@ end
   ]
 get '/months/list' do
   content_type :json
-  response = Faraday.get('https://rti-sound-api.onrender.com/months/list')
-  if response.success?
-    response.body
-  else
-    status 500
-  { error: 'Unable API' }.to_json
-  end
+  months.to_json
 end
 
 set :public, 'public'
