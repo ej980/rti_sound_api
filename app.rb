@@ -6,13 +6,35 @@ require "base64"
 
 use Rack::Cors do
   allow do
-    origins '*' 
+    origins 'https://meee.com.tw' 
+    resource '/audio/*',
+      headers: :any,
+      methods: [:get, :options],
+      credentials: true
+  end
+  allow do
+    origins 'https://meee.com.tw' 
     resource '*',
       headers: :any,
       methods: [:get, :post, :put, :delete, :options, :head],
       credentials: true
   end
 end
+
+before '/audio/*' do
+  response.headers['Access-Control-Allow-Origin'] = 'https://meee.com.tw'
+end
+
+
+
+options '*' do
+  response.headers['Access-Control-Allow-Origin'] = 'https://meee.com.tw'
+  response.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS, HEAD'
+  response.headers['Access-Control-Allow-Headers'] = 'Authorization, Content-Type'
+  200
+end
+
+
 
 set :port, ENV['PORT'] || 4567  
 

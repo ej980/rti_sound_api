@@ -12,14 +12,11 @@ gem 'sinatra-cors'
 
 gem 'faker'
 
-gem 'rack-cors'
 gem 'base64'
 
 
-
+gem 'rack', '~> 3.1', '>= 3.1.7'
 
 
 gem "puma", "~> 6.4"
 
-
-gem "rackup", "~> 2.1"
