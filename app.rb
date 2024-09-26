@@ -14,11 +14,6 @@ use Rack::Cors do
   end
 end
 
-before do
-  response.headers['Access-Control-Allow-Origin'] = '*'
-  response.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS, HEAD'
-end
-
 set :port, ENV['PORT'] || 4567  
 
 get '/' do
