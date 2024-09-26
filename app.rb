@@ -4,9 +4,11 @@ require 'sinatra/cors'
 require 'rack/cors'
 require "base64"
 
+allowed_origins = ['https://meee.com.tw', 'https://2025calendar.rti.org.tw']
+
 use Rack::Cors do
   allow do
-    origins 'https://meee.com.tw' 
+    origins allowed_origins
     resource '*',
       headers: :any,
       methods: [:get, :post, :put, :delete, :options, :head],
