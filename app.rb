@@ -31,7 +31,7 @@ get '/download/:version/:month' do
 
   if File.exist?(file_path)
     content_type 'application/octet-stream'
-    attachment "#{month}_#{version}.jpg"
+    attachment "Rti2025calendar_#{month}_#{version}.jpg"
     send_file(file_path)
   else
     status 404
